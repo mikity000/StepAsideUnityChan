@@ -28,7 +28,7 @@ public class ItemGenerator : MonoBehaviour
             return;
 
         //プレイヤー座標と生成座標の距離が40を超えた場合
-        if (Vector3.Distance(player.transform.position, new Vector3(0, 0, spawnPos)) > 40)
+        if ((player.transform.position - new Vector3(0, 0, spawnPos)).sqrMagnitude > 1600)
             return;
         
         preSpawnPos = spawnPos;
